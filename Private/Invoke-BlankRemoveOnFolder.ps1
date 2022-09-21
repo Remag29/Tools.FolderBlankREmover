@@ -22,4 +22,5 @@ function Invoke-BlankRemoveOnFolder {
     
     $oldFolderName = $(Get-Item -Path $FolderPath).BaseName
     Rename-Item -Path $FolderPath -NewName $oldFolderName.replace(' ', '_')
+    # TODO : Error when oldFolderName is identical to new (no space to replace inside)
 }
